@@ -27,7 +27,7 @@ function initMermaid() {
             // console.log(merm.firstChild.height);
             // console.log(graph);
             // console.log(merm.innerHTML);
-            heights[id] = merm.firstChild.height.baseVal.value;
+            heights[id] = `${Math.round(merm.firstChild.height.baseVal.value)}px`;
             
         } catch (error) {
             console.error("Failed to render graph", JSON.stringify(error));
@@ -51,7 +51,7 @@ if (document.readyState == 'loading') {
     initMermaid();
 }
 
-console.log(document.body.innerHTML)
+// console.log(document.body.innerHTML)
 
 // var h1 = document.createElement("h1");
 // h1.textContent("Joel");

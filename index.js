@@ -48,7 +48,7 @@ module.exports.activate = () => {
             const highlight = md.options.highlight;
             md.options.highlight = (code, lang) => {
                 if (lang && lang.match(/\bmermaid\b/i)) {
-                    return `<div class="${pluginKeyword}">${preProcess(code)}</div>`;
+                    return `<div class="${pluginKeyword}">${preProcess(code)}</div><img src onerror="console.log('image error run');" />`;
                 }
                 return highlight(code, lang);
             };
